@@ -1,0 +1,839 @@
+/*  
+Theme Name: Hambrientos de Todo
+Description: Wordpress theme designed and built for the site: http://www.hambrientosdetodo.com
+Version: 1.0
+Author: Nkart
+Author URL: http://www.nkart.com
+
+	Hambrientos de todo
+	http://www.hambrientosdetodo.com
+
+	This theme was designed and built by Nkart
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+
+/* Font face for titles */
+
+@font-face {
+    font-family: 'Katrina';
+    src: url('/wp-content/themes/hambrientosdetodo/font/Katrina-Normal.eot');
+    src: url('/wp-content/themes/hambrientosdetodo/font/Katrina-Normal.eot#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/hambrientosdetodo/font/Katrina-Normal.woff2') format('woff2'),
+        url('/wp-content/themes/hambrientosdetodo/font/Katrina-Normal.woff') format('woff'),
+        url('/wp-content/themes/hambrientosdetodo/font/Katrina-Normal.ttf') format('truetype'),
+        url('/wp-content/themes/hambrientosdetodo/font/Katrina-Normal.svg#Katrina-Normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* Nav bug correction */
+
+#navt-3 {display:none;}
+
+.nocomments {visibility:hidden;}
+
+
+.postmetadata {display:none;}
+
+
+body {
+font-family: arial, helvetica, sans-serif;
+font-size:11px;
+background: #65730f url(/wp-content/themes/hambrientosdetodo/images/bk.png) repeat-x;
+color:black;
+margin: 0;
+padding:0;
+}
+
+hr {
+	border: none 0;
+	border-top: 1px dashed #999;
+	height: 1px;
+	display:block;
+       clear:both;
+       margin: 0 0 25px 0px;
+        
+}
+
+/* --------- Contenedor principal ----------- */
+
+#wrapper {width:990px;margin-left:5px;}
+#rightbar {width:760px;float:left;}
+
+/* --------------- SIDEBAR --------------- */
+
+#logo {margin: 18px 0 0 20px;
+}#logo-options {font-family: "Trebuchet MS", Arial, sans-serif;text-align:center;font-size:13px;}
+#logo-options a {color:white;text-decoration:none;}#logo-options p {margin:10px 0 0 0;} #logo-options ul {list-style-type:none;margin:5px 0 0 30px;padding:0;}#logo-options li {margin:0;padding:0;float:left;margin-bottom:20px;margin-right:8px;display:inline;}
+#logo-options a:hover {text-decoration:underline;}
+#sidebar
+{
+
+	width: 222px;
+	padding-right:2px;
+	float:left;
+	}
+
+#menu {
+margin-top:20px;
+font-family: "Trebuchet MS", Arial, sans-serif;
+font-size:14px;
+padding-left:5px;
+ }
+
+#menu a {
+color:black;}
+
+#menu form {
+	margin: 0;
+	}
+
+#menu h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size: 21px;
+	color:white;
+	letter-spacing:-1px;
+/*    color:#222800; */
+    font-weight:normal;
+	}
+
+#menu ul, #menu ul ol {
+	margin: 0;
+	list-style-type:none;
+	
+	padding-left: 20px;
+	
+	}
+
+#menu ul ul li a, #menu ul ol li a {
+/* background: transparent url(/wp-content/themes/hambrientosdetodo/images/bullet.png) left no-repeat; */
+
+padding-left:0px; 
+} 
+
+#menu ul li {
+
+	margin-bottom: 15px;
+        	}
+
+#menu ul p, #menu ul select {
+	
+	margin: 5px 0 8px;
+	}
+
+#menu ul ul, #menu ul ol {
+list-style-image: url(/wp-content/themes/hambrientosdetodo/images/bullet.png);
+	margin: 10px 0 0 0px;
+	}
+
+#menu ul ul ul, #menu ul ol {
+	margin: 0;
+	}
+
+ol li, #menu ul ol li {
+	list-style: decimal outside;
+	}
+
+#menu ul ul li, #menu ul ol li {
+	
+	margin:0;
+	padding: 0;
+	}
+
+
+
+
+/* --------------- FIN SIDEBAR --------------- */
+
+
+
+
+#page {
+
+	background-image: url(/wp-content/themes/hambrientosdetodo/images/page-bk.png);
+	background-repeat:repeat-y;
+	padding: 0;
+	float:left;
+	width: 760px;
+	text-align: left;
+	height:auto;
+}
+
+#header-background {
+	background: transparent url(/wp-content/themes/hambrientosdetodo/images/header-bk.png) no-repeat;
+	margin: 0; 
+	padding: 0; 
+
+}
+#header {	height:428px;	background: transparent url(/wp-content/themes/hambrientosdetodo/images/header-default.jpg) no-repeat 39px 45px;}
+
+
+/* ----------------- FOOTER ---------------------- */
+
+
+#footer {
+width:760px;
+float:left;
+color:white;
+background-image:url(/wp-content/themes/hambrientosdetodo/images/footer-bk.png);
+background-position:top;
+background-repeat:no-repeat;
+margin:0;
+padding:0;
+}
+
+
+#footer #footer-content {
+	padding:18px; 
+	text-align:center;
+	font-family:"Trebuchet MS", arial;
+	font-size:12px;
+	}
+
+
+#footer a {
+color:white;
+text-decoration:none;
+}
+
+#footer a:hover {
+color:white;
+text-decoration:underline; 
+}
+
+#content {
+
+	}
+
+
+/* ------------ FORMATOS DE POST Y TIPOGRAFIAS ---------- */
+
+/* Citas */
+
+blockquote {
+	margin:20px 0 20px 0;
+	padding:0px 0 0 0px;
+	padding-top:0.5px;
+	background: transparent url(/wp-content/themes/hambrientosdetodo/images/blockquote-bk.png) no-repeat;
+	background-position:top left;
+	letter-spacing:-1px;	
+	font-size:16px;
+	font-weight:bold;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+/* ------------------- H's ------------------------ */
+
+.narrowcolumn h2 {
+		
+	font-size:40px;
+	word-spacing:-4px;
+	font-weight:100;
+		}
+		
+		
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: normal;
+	}
+
+h3 {font-size:20px;}
+
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+	
+/* -------------------- LINKS -------------------- */
+
+.postmetadata a {color:#ff7c00;}
+
+#content a, h2, h3 {
+	color: #ff6900;
+	font-weight:bold;
+	text-decoration: none;
+
+	}
+
+#content a {text-decoration:underline;}	
+	
+#content a:hover {
+	color: #7b8d0c;
+	text-decoration: underline;
+	}
+
+#menu a {
+	text-decoration:none; 
+	}
+	
+#menu a:hover {
+	text-decoration:underline;
+	}
+	
+
+
+/* ------------ COLUMNAS POSTS -------------- */	
+
+
+.mini-fotos {clear:both;}
+
+.mini-fotos img {float:left;margin: 0 8px 8px 0px;}
+
+.texto {  
+width:390px;  
+float:left;  
+padding-right:0px;
+} 
+
+.fotos { 
+width:235px;
+border-left: 1px dashed #D8D8D8;
+float:right;
+padding-left:20px;
+
+}
+
+.fotos img {
+display:block;
+margin-bottom:23px;
+border: solid 1px #CCCCCC;
+padding:5px;
+
+}
+
+.fotos a:hover img {
+background-color:#b7d405;
+cursor: -moz-zoom-in;
+
+}
+
+.post img {
+border: solid 1px #CCCCCC;
+padding:5px;
+}
+
+.post a:hover img {
+background-color:#b7d405;
+cursor: -moz-zoom-in;
+
+}
+
+
+
+/* ------------ GALERIA DE FOTOS -------------- */
+
+.galeria {width:680px;margin:0 auto;clear:both;}
+
+.galeria img { float:left;border: solid 1px #CCCCCC;padding:5px;margin:10px 10px 0 0;}
+
+.galeria a:hover img {
+background-color:#b7d405;
+cursor: -moz-zoom-in;
+}
+
+
+/* ------------ TABLAS -------------- */
+
+.postTable {width:600px;border-collapse: collapse;}
+
+.postTable p, .postTable td, .postTable tr {margin:0;padding:0;}
+
+.postTable strong {}
+
+
+	
+.clear {
+clear:both;
+}
+
+.narrowcolumn {
+width:670px;
+}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+
+.narrowcolumn .postmetadata {
+font-size:12px;
+	
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+small {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size:14px;
+	}
+
+
+
+#headerimg .description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	
+	}
+
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+
+
+small, .nocomments, .postmetadata, strike {
+	color: #777;
+	}
+
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+
+
+#wp-calendar #prev a, #wp-calendar #next a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+
+
+.narrowcolumn {
+	padding: 0 0 0 45px;
+	margin-top:-25px;
+	float: left;
+	
+	}
+	
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+
+.post {
+	margin: 0 0 40px;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size:14px;
+	color:#52530a;
+	text-align: justify;
+	}
+
+.post hr {
+	display: block;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+
+.widecolumn .smallattachment {
+	text-align: center;
+	float: left;
+	width: 128px;
+	margin: 5px 5px 5px 0px;
+}
+
+.widecolumn .attachment {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.postmetadata {
+	clear: left;
+}
+
+
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+h2 {
+    margin: 30px 0 10px 0;
+    font-family: 'Katrina';
+    letter-spacing: -1px;
+    line-height: 40px;
+}
+
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+}
+
+
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+
+html>body .entry ul {
+	margin-left: 0px;
+	padding: 0 0 0 30px;
+	padding-left: 10px;
+	
+	} 
+
+html>body .entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+/*
+.entry ul li:before {
+	content: "\00BB \0020";
+	}
+*/
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 108px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	font-size:12px;
+	font-family:"Trebuchet MS", arial;
+	color:#52530a;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+
+
+.center {
+	text-align: center;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	margin-top:40px;
+
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
+center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+
+
+.center {
+	text-align: center;
+	}
+
+a img {
+	border: none;
+	}
+
+
+/* End Various Tags & Classes*/
+
